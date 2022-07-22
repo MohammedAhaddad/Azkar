@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Scrren2/AzkarMaslm.dart';
 
@@ -42,8 +43,9 @@ class AzkarUI extends StatelessWidget {
                             SizedBox(
                               width: MediaQuery.of(context).size.width / 3.5,
                             ),
-                            Image.network(
-                              "https://static.swatch.com/images/product/SO33M100/sa200/SO33M100_sa200_er005.png",
+                            CachedNetworkImage(
+                              imageUrl:
+                                  "https://static.swatch.com/images/product/SO33M100/sa200/SO33M100_sa200_er005.png",
                               height: 150,
                               width: 150,
                             )
@@ -185,7 +187,7 @@ class AzkarUI extends StatelessWidget {
                                   SizedBox(
                                     width: 30,
                                   ),
-                                  Image.network(man)
+                                  CachedNetworkImage(imageUrl: man)
                                 ]),
                               ),
                             )),
@@ -236,8 +238,9 @@ class AzkarUI extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Image.network(
-                                      "https://cdn.icon-icons.com/icons2/1521/PNG/512/stopwatchhd_106058.png")
+                                  CachedNetworkImage(
+                                      imageUrl:
+                                          "https://cdn.icon-icons.com/icons2/1521/PNG/512/stopwatchhd_106058.png")
                                 ],
                               ),
                             ])),
@@ -285,8 +288,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_pray_icon_183480.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_pray_icon_183480.png")
                               ]),
                             ),
                           ),
@@ -334,8 +338,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_god_allah_icon_183494.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_god_allah_icon_183494.png")
                               ]),
                             ),
                           ),
@@ -388,8 +393,9 @@ class AzkarUI extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_pray_icon_183480.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_pray_icon_183480.png")
                               ],
                             ),
                           ]),
@@ -442,8 +448,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_mosque_moon_icon_183475.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_mosque_moon_icon_183475.png")
                               ]),
                             ),
                           ),
@@ -486,8 +493,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/128/mosque_ramadhan_moslem_fasting_islam_icon_183472.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/128/mosque_ramadhan_moslem_fasting_islam_icon_183472.png")
                               ]),
                             ),
                           ),
@@ -543,8 +551,9 @@ class AzkarUI extends StatelessWidget {
                                   SizedBox(
                                     width: 28,
                                   ),
-                                  Image.network(
-                                      "https://cdn.icon-icons.com/icons2/1413/PNG/256/documents_97553.png")
+                                  CachedNetworkImage(
+                                      imageUrl:
+                                          "https://cdn.icon-icons.com/icons2/1413/PNG/256/documents_97553.png")
                                 ]),
                               ),
                             )),
@@ -586,8 +595,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_mosque_icon_183482.png")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_mosque_icon_183482.png")
                               ]),
                             ),
                           ),
@@ -639,8 +649,9 @@ class AzkarUI extends StatelessWidget {
                                 SizedBox(
                                   width: 28,
                                 ),
-                                Image.network(
-                                    "https://t3.ftcdn.net/jpg/04/90/92/62/240_F_490926257_2auTbr7zNEulAysy1riOiRCKQ5LfLo3I.jpg")
+                                CachedNetworkImage(
+                                    imageUrl:
+                                        "https://t3.ftcdn.net/jpg/04/90/92/62/240_F_490926257_2auTbr7zNEulAysy1riOiRCKQ5LfLo3I.jpg")
                               ]),
                             ),
                           ),

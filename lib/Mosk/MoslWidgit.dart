@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/Doaa.dart';
+import 'package:flutter_application_2/Mosk/Moskk.dart';
 import 'package:flutter_application_2/data/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DoaaWidget extends StatefulWidget {
-  Doaa doa;
-  DoaaWidget(this.doa);
+class MoslWidgit extends StatefulWidget {
+  Moskk doa;
+  MoslWidgit(this.doa);
 
   @override
-  State<DoaaWidget> createState() => _DoaaWidgetState();
+  State<MoslWidgit> createState() => _MoslWidgitState();
 }
 
-class _DoaaWidgetState extends State<DoaaWidget> {
+class _MoslWidgitState extends State<MoslWidgit> {
   String? wid;
   int cont = 3;
   setStateFunction() {

@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/Doaa.dart';
+import 'package:flutter_application_2/Sleep/SleepZker.dart';
 import 'package:flutter_application_2/data/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DoaaWidget extends StatefulWidget {
-  Doaa doa;
-  DoaaWidget(this.doa);
+class SleepWidget extends StatefulWidget {
+  SleepZeker doa;
+  SleepWidget(this.doa);
 
   @override
-  State<DoaaWidget> createState() => _DoaaWidgetState();
+  State<SleepWidget> createState() => _SleepWidgetState();
 }
 
-class _DoaaWidgetState extends State<DoaaWidget> {
+class _SleepWidgetState extends State<SleepWidget> {
   String? wid;
   int cont = 3;
   setStateFunction() {
@@ -20,6 +21,8 @@ class _DoaaWidgetState extends State<DoaaWidget> {
 
   @override
   Widget build(BuildContext context) {
+    String wid;
+
     return Container(
       child: SingleChildScrollView(
           child: Container(

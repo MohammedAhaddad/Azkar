@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/DoaaWidget.dart';
+import 'package:flutter_application_2/Sleep/SleepZkerWidget.dart';
+import 'package:flutter_application_2/data/SleepZ.dart';
 import 'package:flutter_application_2/data/data.dart';
 
-class AllNewsScreen extends StatelessWidget {
+class AllSleepScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +44,9 @@ class AllNewsScreen extends StatelessWidget {
             shrinkWrap: true,
             physics: const AlwaysScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
-            itemCount: AzkrList.length,
+            itemCount: SleepList.length,
             itemBuilder: ((context, index) {
-              return DoaaWidget(AzkrList[index].doaa);
+              return SleepWidget(SleepList[index].SleepZeke);
             })));
   }
 }

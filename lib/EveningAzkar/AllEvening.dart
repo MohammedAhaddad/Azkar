@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/AzkarModels/DoaaWidget.dart';
-import 'package:flutter_application_2/data/data.dart';
+import 'package:flutter_application_2/EveningAzkar/EveningWidget.dart';
+import 'package:flutter_application_2/data/Evening.dart';
 
-class AllNewsScreen extends StatelessWidget {
+class AllEvening extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,9 +42,9 @@ class AllNewsScreen extends StatelessWidget {
             shrinkWrap: true,
             physics: const AlwaysScrollableScrollPhysics(),
             scrollDirection: Axis.vertical,
-            itemCount: AzkrList.length,
+            itemCount: EveningList.length,
             itemBuilder: ((context, index) {
-              return DoaaWidget(AzkrList[index].doaa);
+              return EveningWidget(EveningList[index].evening);
             })));
   }
 }

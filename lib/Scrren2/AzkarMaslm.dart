@@ -1,5 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/AllZker.dart';
+import 'package:flutter_application_2/EveningAzkar/AllEvening.dart';
+import 'package:flutter_application_2/Mosk/AllMoskZker.dart';
+import 'package:flutter_application_2/Prayer/AllPrayerZker.dart';
+import 'package:flutter_application_2/Sleep/AllSleepZker.dart';
+import 'package:flutter_application_2/wake_up_Azkar/AllWakeUP.dart';
 
 class AzkarMaslm extends StatelessWidget {
   String qr =
@@ -60,8 +66,9 @@ class AzkarMaslm extends StatelessWidget {
                                       SizedBox(
                                         width: 23,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/2527/PNG/512/sunrise_weather_icon_151777.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/2527/PNG/512/sunrise_weather_icon_151777.png")
                                     ]),
                                   ),
                                 ),
@@ -98,15 +105,17 @@ class AzkarMaslm extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => AzkarMaslm(),
+                                            builder: (context) =>
+                                                AllWakeUPScreen(),
                                           ))
                                     },
                                     child: Row(children: [
                                       SizedBox(
                                         width: 28,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/2952/PNG/512/lantern_icon_184536.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/2952/PNG/512/lantern_icon_184536.png")
                                     ]),
                                   ),
                                 ),
@@ -147,15 +156,17 @@ class AzkarMaslm extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => AzkarMaslm(),
+                                            builder: (context) =>
+                                                AllSleepScreen(),
                                           ))
                                     },
                                     child: Row(children: [
                                       SizedBox(
                                         width: 23,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/2922/PNG/128/mosque_ramadhan_moslem_fasting_islam_icon_183472.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/2922/PNG/128/mosque_ramadhan_moslem_fasting_islam_icon_183472.png")
                                     ]),
                                   ),
                                 ),
@@ -192,15 +203,16 @@ class AzkarMaslm extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => AzkarMaslm(),
+                                            builder: (context) => AllEvening(),
                                           ))
                                     },
                                     child: Row(children: [
                                       SizedBox(
                                         width: 28,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/3191/PNG/128/sunset_sun_sunshine_sunrise_weather_icon_194245.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/3191/PNG/128/sunset_sun_sunshine_sunrise_weather_icon_194245.png")
                                     ]),
                                   ),
                                 ),
@@ -243,15 +255,17 @@ class AzkarMaslm extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => AzkarMaslm(),
+                                            builder: (context) =>
+                                                AllPrayerZkerScreen(),
                                           ))
                                     },
                                     child: Row(children: [
                                       SizedBox(
                                         width: 23,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/2951/PNG/512/pray_icon_184487.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/2951/PNG/512/pray_icon_184487.png")
                                     ]),
                                   ))),
                               Container(
@@ -287,15 +301,17 @@ class AzkarMaslm extends StatelessWidget {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) => AzkarMaslm(),
+                                            builder: (context) =>
+                                                AllMoskScreen(),
                                           ))
                                     },
                                     child: Row(children: [
                                       SizedBox(
                                         width: 28,
                                       ),
-                                      Image.network(
-                                          "https://cdn.icon-icons.com/icons2/2922/PNG/128/ramadhan_moslem_fasting_islam_mosque_star_icon_183496.png")
+                                      CachedNetworkImage(
+                                          imageUrl:
+                                              "https://cdn.icon-icons.com/icons2/2922/PNG/128/ramadhan_moslem_fasting_islam_mosque_star_icon_183496.png")
                                     ]),
                                   ))),
                               Container(

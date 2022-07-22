@@ -1,17 +1,20 @@
+//wakeUpWidget
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/Doaa.dart';
 import 'package:flutter_application_2/data/data.dart';
+import 'package:flutter_application_2/wake_up_Azkar/wakeUP.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DoaaWidget extends StatefulWidget {
-  Doaa doa;
-  DoaaWidget(this.doa);
+class wakeUpWidget extends StatefulWidget {
+  WakeUP wakeUP;
+  wakeUpWidget(this.wakeUP);
 
   @override
-  State<DoaaWidget> createState() => _DoaaWidgetState();
+  State<wakeUpWidget> createState() => _wakeUPWidgetState();
 }
 
-class _DoaaWidgetState extends State<DoaaWidget> {
+class _wakeUPWidgetState extends State<wakeUpWidget> {
   String? wid;
   int cont = 3;
   setStateFunction() {
@@ -20,6 +23,8 @@ class _DoaaWidgetState extends State<DoaaWidget> {
 
   @override
   Widget build(BuildContext context) {
+    String wid;
+
     return Container(
       child: SingleChildScrollView(
           child: Container(
@@ -32,11 +37,12 @@ class _DoaaWidgetState extends State<DoaaWidget> {
                   Center(
                     child: new RaisedButton(
                       onPressed: () => {
-                        if (widget.doa.Repetition == 0)
+                        if (widget.wakeUP.Repetition == 0)
                           {}
                         else
                           {
-                            widget.doa.Repetition = widget.doa.Repetition! - 1,
+                            widget.wakeUP.Repetition =
+                                widget.wakeUP.Repetition! - 1,
                             setStateFunction()
                           }
                       },
@@ -47,13 +53,13 @@ class _DoaaWidgetState extends State<DoaaWidget> {
                                 left: MediaQuery.of(context).size.width / 1.2),
                             child: CircleAvatar(
                               radius: 25,
-                              child: Text(widget.doa.Repetition.toString()),
+                              child: Text(widget.wakeUP.Repetition.toString()),
                             ),
                           ),
                           Center(
                               //  margin: EdgeInsets.all(10),
                               child: Text(
-                            wid = widget.doa.Ziker ?? "",
+                            wid = widget.wakeUP.Ziker ?? "",
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 25,

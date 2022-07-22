@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/Doaa.dart';
+import 'package:flutter_application_2/Prayer/Prayer.dart';
 import 'package:flutter_application_2/data/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class DoaaWidget extends StatefulWidget {
-  Doaa doa;
-  DoaaWidget(this.doa);
+class PrayerWidgit extends StatefulWidget {
+  Prayer prayer;
+  PrayerWidgit(this.prayer);
 
   @override
-  State<DoaaWidget> createState() => _DoaaWidgetState();
+  State<PrayerWidgit> createState() => _PrayerWidgitState();
 }
 
-class _DoaaWidgetState extends State<DoaaWidget> {
+class _PrayerWidgitState extends State<PrayerWidgit> {
   String? wid;
   int cont = 3;
   setStateFunction() {
@@ -32,11 +33,12 @@ class _DoaaWidgetState extends State<DoaaWidget> {
                   Center(
                     child: new RaisedButton(
                       onPressed: () => {
-                        if (widget.doa.Repetition == 0)
+                        if (widget.prayer.Repetition == 0)
                           {}
                         else
                           {
-                            widget.doa.Repetition = widget.doa.Repetition! - 1,
+                            widget.prayer.Repetition =
+                                widget.prayer.Repetition! - 1,
                             setStateFunction()
                           }
                       },
@@ -47,13 +49,13 @@ class _DoaaWidgetState extends State<DoaaWidget> {
                                 left: MediaQuery.of(context).size.width / 1.2),
                             child: CircleAvatar(
                               radius: 25,
-                              child: Text(widget.doa.Repetition.toString()),
+                              child: Text(widget.prayer.Repetition.toString()),
                             ),
                           ),
                           Center(
                               //  margin: EdgeInsets.all(10),
                               child: Text(
-                            wid = widget.doa.Ziker ?? "",
+                            wid = widget.prayer.Ziker ?? "",
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 25,
