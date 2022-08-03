@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/MyAzkar/AddZker.dart';
 import 'package:flutter_application_2/Scrren2/AzkarMaslm.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_application_2/qran/screens/home.dart';
 import 'package:hijri/hijri_calendar.dart';
 
 class AzkarUI extends StatefulWidget {
@@ -160,7 +161,7 @@ class _AzkarUIState extends State<AzkarUI> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => AzkarMaslm(),
+                                  builder: (context) => HomeScreen(),
                                 ))
                           },
                           child: Row(children: [

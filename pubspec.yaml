@@ -81,6 +81,8 @@ flutter:
   assets:
    - assets/profaile/
    - assets/translations/
+   - assets/surah.json
+   - assets/fonts/
    
   #   - images/a_dot_ham.jpeg
 
