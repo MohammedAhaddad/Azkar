@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/AzkarModels/AllZker.dart';
 import 'package:flutter_application_2/EveningAzkar/AllEvening.dart';
@@ -16,7 +17,7 @@ class AzkarMaslm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text("أذكار المسلم "),
+            title: Text("     أذكار المسلم".tr()),
             backgroundColor: const Color.fromARGB(255, 67, 160, 236),
             actions: <Widget>[
               IconButton(

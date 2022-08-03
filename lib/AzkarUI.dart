@@ -1,14 +1,28 @@
+import 'package:analog_clock/analog_clock.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/MyAzkar/AddZker.dart';
 import 'package:flutter_application_2/Scrren2/AzkarMaslm.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:hijri/hijri_calendar.dart';
 
-class AzkarUI extends StatelessWidget {
+class AzkarUI extends StatefulWidget {
+  @override
+  State<AzkarUI> createState() => _AzkarUIState();
+}
+
+class _AzkarUIState extends State<AzkarUI> {
   String imgg = "assets\profaile\azkar.png";
+
   String qr = "assets/profaile/—Pngtree—al quran 3d design_7555127.png";
+
   String man =
       "https://cdn.icon-icons.com/icons2/2922/PNG/512/ramadhan_moslem_fasting_islam_man_pray_icon_183502.png";
+
   String Azkary =
       "assets/profaile/—Pngtree—eid mubarak pray o allah_5993838.png";
+
+  HijriCalendar _today = HijriCalendar.now();
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +31,7 @@ class AzkarUI extends StatelessWidget {
         Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          color: Color.fromARGB(255, 19, 24, 82),
+          color: const Color.fromARGB(255, 19, 24, 82),
           child: ListView(
             children: [
               Column(children: [
@@ -29,46 +43,108 @@ class AzkarUI extends StatelessWidget {
                   child: Column(
                     children: [
                       SizedBox(
-                        //width: 30,
                         child: Row(
                           children: [
                             SizedBox(
-                              width: MediaQuery.of(context).size.width / 17.5,
-                            ),
-                            const Icon(
-                              Icons.schedule,
-                              color: Colors.white,
-                              size: 120,
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width / 3.5,
-                            ),
-                            CachedNetworkImage(
-                              imageUrl:
-                                  "https://static.swatch.com/images/product/SO33M100/sa200/SO33M100_sa200_er005.png",
-                              height: 150,
-                              width: 150,
+                              width: MediaQuery.of(context).size.width,
+                              child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height / 5,
+                                  width:
+                                      MediaQuery.of(context).size.width / 7.5,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      AnalogClock(
+                                        decoration: BoxDecoration(
+                                            border: Border.all(
+                                                width: 1.0,
+                                                color: Colors.white),
+                                            color: Colors.transparent,
+                                            shape: BoxShape.circle),
+                                        width:
+                                            MediaQuery.of(context).size.width /
+                                                1.5,
+                                        height:
+                                            MediaQuery.of(context).size.height /
+                                                5,
+                                        hourHandColor: Colors.white,
+                                        minuteHandColor: Colors.white,
+                                        numberColor: Colors.white,
+                                        showNumbers: true,
+                                        showDigitalClock: true,
+                                        digitalClockColor: Colors.white,
+
+                                        //     border: Border.all(
+                                        //         width: 2.0, color: Colors.white),
+                                        //     color: Colors.transparent,
+                                        //     shape: BoxShape.circle),
+                                        // width: 150.0,
+                                        // isLive: true,
+                                        // hourHandColor: Colors.white,
+                                        // minuteHandColor: Colors.white,
+                                        // showSecondHand: false,
+                                        // numberColor: Colors.white,
+                                        // showNumbers: true,
+                                        // showAllNumbers: false,
+                                        // textScaleFactor: 1.4,
+                                        // showTicks: false,
+                                        // showDigitalClock: false,
+                                        // datetime: DateTime(2019, 1, 1, 9, 12, 15),
+                                      ),
+                                    ],
+                                  )),
                             )
+                            // const Icon(
+                            //   Icons.schedule,
+                            //   color: Colors.white,
+                            //   size: 120,
+                            // ),
+                            ,
+                            // SizedBox(
+                            //   width: MediaQuery.of(context).size.width / 3.5,
+                            // ),
+                            // CachedNetworkImage(
+                            //   imageUrl:
+                            //       "https://static.swatch.com/images/product/SO33M100/sa200/SO33M100_sa200_er005.png",
+                            //   height: 150,
+                            //   width: 150,
+                            // )
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 20,
                       ),
                       SizedBox(
                           width: MediaQuery.of(context).size.width / 1.8,
                           child: Row(
-                            children: const [
-                              Text("1443 ذو الحجة  ",
+                            children: [
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width / 15,
+                              ),
+                              Text(_today.hYear.toString(),
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 30)),
+                              const Text("/ ",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 25)),
-                              Text("14",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 25))
+                                      color: Colors.white, fontSize: 30)),
+                              Text(_today.hMonth.toString(),
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 30)),
+                              const Text("/ ",
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 30)),
+                              Text(_today.hDay.toString(),
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 30))
                             ],
                           ))
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height / 60,
                 ),
 
                 //الصورة الاولا
@@ -99,11 +175,11 @@ class AzkarUI extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      color: Color.fromARGB(255, 91, 100, 99),
+                      color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
-                        children: const [
-                          Text("                   القرأن الكريم",
-                              style: TextStyle(
+                        children: [
+                          Text("                   القرأن الكريم".tr(),
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold)),
@@ -134,11 +210,11 @@ class AzkarUI extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => AzkarMaslm(),
+                                      builder: (context) => AddZker(),
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 23,
                                 ),
                                 Image.asset(Azkary)
@@ -152,11 +228,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("          أذكاري",
-                                  style: TextStyle(
+                            children: [
+                              Text("          أذكاري".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -165,7 +241,7 @@ class AzkarUI extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -184,7 +260,7 @@ class AzkarUI extends StatelessWidget {
                                       ))
                                 },
                                 child: Row(children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 30,
                                   ),
                                   CachedNetworkImage(imageUrl: man)
@@ -194,11 +270,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("     أذكار المسلم",
-                                  style: TextStyle(
+                            children: [
+                              Text("     أذكار المسلم".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -213,7 +289,7 @@ class AzkarUI extends StatelessWidget {
 
                 //Column 3
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
 
@@ -247,11 +323,11 @@ class AzkarUI extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      color: Color.fromARGB(255, 91, 100, 99),
+                      color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
-                        children: const [
-                          Text("       إعدادات/تعديل أوقات وتنبيه ",
-                              style: TextStyle(
+                        children: [
+                          Text("       إعدادات/تعديل أوقات وتنبيه ".tr(),
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold)),
@@ -264,7 +340,7 @@ class AzkarUI extends StatelessWidget {
 
                 //row 4
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -285,7 +361,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -302,11 +378,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("        المسبحة",
-                                  style: TextStyle(
+                            children: [
+                              Text("        المسبحة".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -315,7 +391,7 @@ class AzkarUI extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -335,7 +411,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -350,11 +426,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("أسماء الله الحسنى",
-                                  style: TextStyle(
+                            children: [
+                              Text("أسماء الله الحسنى".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -369,7 +445,7 @@ class AzkarUI extends StatelessWidget {
 
                 //colume 5
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Column(
@@ -407,11 +483,11 @@ class AzkarUI extends StatelessWidget {
                       //
                     ),
                     Container(
-                      color: Color.fromARGB(255, 91, 100, 99),
+                      color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
-                        children: const [
-                          Text("        أظهار المسبحة  على الشاشة ",
-                              style: TextStyle(
+                        children: [
+                          Text("        أظهار المسبحة  على الشاشة ".tr(),
+                              style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
                                   fontWeight: FontWeight.bold)),
@@ -424,7 +500,7 @@ class AzkarUI extends StatelessWidget {
 
                 //الصف 6
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -445,7 +521,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -458,11 +534,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("   التاريخ الهجري",
-                                  style: TextStyle(
+                            children: [
+                              Text("   التاريخ الهجري".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -471,7 +547,7 @@ class AzkarUI extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -490,7 +566,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -503,11 +579,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("     مناسبة دينية ",
-                                  style: TextStyle(
+                            children: [
+                              Text("     مناسبة دينية ".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -519,7 +595,7 @@ class AzkarUI extends StatelessWidget {
                   ],
                 ),
                 //النهاية
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
 
@@ -527,7 +603,7 @@ class AzkarUI extends StatelessWidget {
 
                 //بداية 7
 
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
 
@@ -548,7 +624,7 @@ class AzkarUI extends StatelessWidget {
                                           builder: (context) => AzkarMaslm()));
                                 }),
                                 child: Row(children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 28,
                                   ),
                                   CachedNetworkImage(
@@ -560,11 +636,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("     رسائل ايمانية ",
-                                  style: TextStyle(
+                            children: [
+                              Text("     رسائل ايمانية ".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -573,7 +649,7 @@ class AzkarUI extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Column(
@@ -592,7 +668,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -605,11 +681,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("    السيرة النبوية",
-                                  style: TextStyle(
+                            children: [
+                              Text("    السيرة النبوية".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -623,7 +699,7 @@ class AzkarUI extends StatelessWidget {
 
                 //نهاية
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 )
                 //بدايو الثامن
@@ -646,7 +722,7 @@ class AzkarUI extends StatelessWidget {
                                     ))
                               },
                               child: Row(children: [
-                                SizedBox(
+                                const SizedBox(
                                   width: 28,
                                 ),
                                 CachedNetworkImage(
@@ -659,11 +735,11 @@ class AzkarUI extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
-                          color: Color.fromARGB(255, 91, 100, 99),
+                          color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
-                            children: const [
-                              Text("        طلباتكم نلبيها",
-                                  style: TextStyle(
+                            children: [
+                              Text("        طلباتكم نلبيها".tr(),
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
                                       fontWeight: FontWeight.bold)),
@@ -677,7 +753,7 @@ class AzkarUI extends StatelessWidget {
                 //نهاية
 //نهاية
                 ,
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(

@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class wakeUpWidget extends StatefulWidget {
   WakeUP wakeUP;
+
   wakeUpWidget(this.wakeUP);
 
   @override
@@ -17,6 +18,7 @@ class wakeUpWidget extends StatefulWidget {
 class _wakeUPWidgetState extends State<wakeUpWidget> {
   String? wid;
   int cont = 3;
+
   setStateFunction() {
     setState(() {});
   }
@@ -28,8 +30,7 @@ class _wakeUPWidgetState extends State<wakeUpWidget> {
     return Container(
       child: SingleChildScrollView(
           child: Container(
-              margin:
-                  EdgeInsets.only(top: MediaQuery.of(context).size.height / 70),
+              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height / 70),
               width: MediaQuery.of(context).size.width / 2.1,
               //  color: const Color.fromARGB(153, 119, 114, 114),
               child: Column(
@@ -40,17 +41,12 @@ class _wakeUPWidgetState extends State<wakeUpWidget> {
                         if (widget.wakeUP.Repetition == 0)
                           {}
                         else
-                          {
-                            widget.wakeUP.Repetition =
-                                widget.wakeUP.Repetition! - 1,
-                            setStateFunction()
-                          }
+                          {widget.wakeUP.Repetition = widget.wakeUP.Repetition! - 1, setStateFunction()}
                       },
                       child: Column(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(
-                                left: MediaQuery.of(context).size.width / 1.2),
+                            margin: EdgeInsets.only(left: MediaQuery.of(context).size.width / 1.2),
                             child: CircleAvatar(
                               radius: 25,
                               child: Text(widget.wakeUP.Repetition.toString()),
@@ -59,23 +55,21 @@ class _wakeUPWidgetState extends State<wakeUpWidget> {
                           Center(
                               //  margin: EdgeInsets.all(10),
                               child: Text(
-                            wid = widget.wakeUP.Ziker ?? "",
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                            ),
-                            textDirection: TextDirection.rtl,
+                                wid = widget.wakeUP.Ziker ?? "",
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25,
+                                ),
+                                textDirection: TextDirection.rtl,
                           )),
                           Container(
-                            margin: EdgeInsets.only(
-                                left: MediaQuery.of(context).size.width / 1.8),
+                            margin: EdgeInsets.only(left: MediaQuery.of(context).size.width / 1.8),
                             child: Row(children: [
                               GestureDetector(
                                 // color: const Color.fromARGB(153, 119, 114, 114),
                                 child: Row(
                                   children: const [
-                                    Icon(Icons.whatsapp,
-                                        size: 50, color: Colors.green),
+                                    Icon(Icons.whatsapp, size: 50, color: Colors.green),
                                   ],
                                 ),
                                 onTap: () {
@@ -88,8 +82,7 @@ class _wakeUPWidgetState extends State<wakeUpWidget> {
                               GestureDetector(
                                 child: Text(
                                   "مشاركة",
-                                  style: TextStyle(
-                                      color: Colors.red, fontSize: 25),
+                                  style: TextStyle(color: Colors.red, fontSize: 25),
                                 ),
                                 onTap: () {},
                               )

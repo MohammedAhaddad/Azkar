@@ -104,7 +104,7 @@ class _DoaaWidgetState extends State<DoaaWidget> {
   }
 
   whatsappURL() async {
-    String whatsApp = "whatsapp://send?phone=972597985877&text=$wid";
+    String whatsApp = "whatsapp://send?phone=&text=$wid";
 
     launchUrl(
       Uri.parse(whatsApp),
