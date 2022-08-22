@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/MyAzkar/Body.dart';
 import 'package:flutter_application_2/MyAzkar/MyFloating.dart';
@@ -14,18 +15,16 @@ class _AddZkerState extends State<AddZker> {
     return Scaffold(
       floatingActionButton: myFloating(),
       appBar: AppBar(
-          title: const Text("أذكار المسلم "),
-          elevation: 0,
-          backgroundColor: Colors.blue,
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(
-                Icons.brightness_3,
-                color: Colors.white,
-              ),
-              onPressed: () {},
-            ),
-          ]),
+        title: context.locale.toString == 'ar'
+            ? Text("أذكار المسلم".tr())
+            : Expanded(
+                child: Text(
+                "أذكار المسلم".tr(),
+                style: TextStyle(fontSize: 15),
+              )),
+        elevation: 0,
+        backgroundColor: Colors.blue,
+      ),
       body: body(),
     );
   }

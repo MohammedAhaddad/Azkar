@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/MyAzkar/Provider/db_Proveder.dart';
 import 'package:flutter_application_2/MyAzkar/models/ZkerModels.dart';
@@ -13,8 +14,8 @@ class myFloating extends StatelessWidget {
       onPressed: () => showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-                title: const Text("إضافة ذكر جديد"),
-                content: const Text(": إن اردت ,ستظهر مع الأذكار التلقائية "),
+                title: Text("إضافة ذكر جديد".tr()),
+                content: Text(": إن اردت ,ستظهر مع الأذكار التلقائية ".tr()),
                 actions: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 5,
@@ -27,7 +28,7 @@ class myFloating extends StatelessWidget {
                       },
                       decoration: InputDecoration(
                           border: UnderlineInputBorder(),
-                          labelText: 'أكتب هنا ما تريد',
+                          labelText: 'أكتب هنا ما تريد'.tr(),
                           icon: Icon(Icons.add)),
                     ),
                   ),
@@ -38,7 +39,7 @@ class myFloating extends StatelessWidget {
                       ),
                       TextButton(
                           onPressed: () => Navigator.pop(context, "Cancel"),
-                          child: const Text("إغلاق")),
+                          child: Text("إغلاق".tr())),
                       TextButton(
                         onPressed: () async {
                           ZkerModel z = ZkerModel(ZkerName: content);
@@ -47,7 +48,7 @@ class myFloating extends StatelessWidget {
                           log(content);
                           Navigator.of(context).pop();
                         },
-                        child: const Text("إضف"),
+                        child: Text("إضف".tr()),
                       )
                     ],
                   )

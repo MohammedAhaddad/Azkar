@@ -4,6 +4,7 @@ import 'package:flutter_application_2/MyAzkar/models/ZkerModels.dart';
 
 class db_Proveder extends ChangeNotifier {
   List<ZkerModel> AllZker = [];
+  //ValueNotifier<bool> isDark = ValueNotifier<bool>(false);
 
   getall() async {
     await selectAllZker();

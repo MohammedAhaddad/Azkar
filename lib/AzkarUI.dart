@@ -178,8 +178,9 @@ class _AzkarUIState extends State<AzkarUI> {
                     Container(
                       color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("                   القرأن الكريم".tr(),
+                          Text("القرأن الكريم".tr(),
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
@@ -231,8 +232,9 @@ class _AzkarUIState extends State<AzkarUI> {
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("          أذكاري".tr(),
+                              Text("أذكاري".tr(),
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -269,16 +271,24 @@ class _AzkarUIState extends State<AzkarUI> {
                               ),
                             )),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("     أذكار المسلم".tr(),
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold)),
+                              context.locale.toString() == "ar"
+                                  ? Text("أذكار المسلم".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold))
+                                  : Text("أذكار المسلم".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 13.5,
+                                          fontWeight: FontWeight.bold))
                             ],
                           ),
                         )
@@ -326,11 +336,12 @@ class _AzkarUIState extends State<AzkarUI> {
                     Container(
                       color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("       إعدادات/تعديل أوقات وتنبيه ".tr(),
+                          Text("إعدادات/تعديل أوقات وتنبيه ".tr(),
                               style: const TextStyle(
                                   color: Colors.white,
-                                  fontSize: 25,
+                                  fontSize: 20,
                                   fontWeight: FontWeight.bold)),
                         ],
                       ),
@@ -349,6 +360,7 @@ class _AzkarUIState extends State<AzkarUI> {
                     Column(
                       children: [
                         Container(
+                          alignment: Alignment.center,
                           color: Colors.white,
                           height: MediaQuery.of(context).size.height / 6.5,
                           width: MediaQuery.of(context).size.width / 2.1,
@@ -377,12 +389,14 @@ class _AzkarUIState extends State<AzkarUI> {
                           //
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("        المسبحة".tr(),
+                              Text("المسبحة".tr(),
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -425,10 +439,12 @@ class _AzkarUIState extends State<AzkarUI> {
                           //
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("أسماء الله الحسنى".tr(),
                                   style: const TextStyle(
@@ -484,10 +500,12 @@ class _AzkarUIState extends State<AzkarUI> {
                       //
                     ),
                     Container(
+                      alignment: Alignment.center,
                       color: const Color.fromARGB(255, 91, 100, 99),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("        أظهار المسبحة  على الشاشة ".tr(),
+                          Text("أظهار المسبحة  على الشاشة".tr(),
                               style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 25,
@@ -533,12 +551,14 @@ class _AzkarUIState extends State<AzkarUI> {
                           ),
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("   التاريخ الهجري".tr(),
+                              Text("التاريخ الهجري".tr(),
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -578,16 +598,25 @@ class _AzkarUIState extends State<AzkarUI> {
                           ),
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("     مناسبة دينية ".tr(),
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold)),
+                              context.locale.toString == 'ar'
+                                  ? Text("مناسبة دينية".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold))
+                                  : Expanded(
+                                      child: Text("مناسبة دينية".tr(),
+                                          style: const TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold))),
                             ],
                           ),
                         )
@@ -635,12 +664,14 @@ class _AzkarUIState extends State<AzkarUI> {
                               ),
                             )),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("     رسائل ايمانية ".tr(),
+                              Text("رسائل ايمانية".tr(),
                                   style: const TextStyle(
                                       color: Colors.white,
                                       fontSize: 25,
@@ -680,16 +711,24 @@ class _AzkarUIState extends State<AzkarUI> {
                           ),
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("    السيرة النبوية".tr(),
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold)),
+                              context.locale.toString() == "ar"
+                                  ? Text("السيرة النبوية".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold))
+                                  : Text("السيرة النبوية".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold))
                             ],
                           ),
                         )
@@ -734,16 +773,24 @@ class _AzkarUIState extends State<AzkarUI> {
                           ),
                         ),
                         Container(
+                          alignment: Alignment.center,
                           height: MediaQuery.of(context).size.height / 20,
                           width: MediaQuery.of(context).size.width / 2.1,
                           color: const Color.fromARGB(255, 91, 100, 99),
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("        طلباتكم نلبيها".tr(),
-                                  style: const TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold)),
+                              context.locale.toString() == "ar"
+                                  ? Text("طلباتكم نلبيها".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold))
+                                  : Text("طلباتكم نلبيها".tr(),
+                                      style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold))
                             ],
                           ),
                         ),

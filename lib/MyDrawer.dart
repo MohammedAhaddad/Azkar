@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/Scrren2/AzkarMaslm.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MyDrawer extends StatelessWidget {
   String img =
@@ -13,26 +14,32 @@ class MyDrawer extends StatelessWidget {
             child: Column(children: [
               UserAccountsDrawerHeader(
                   currentAccountPicture: Container(
-                    margin:
-                        const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                    child: CircleAvatar(
-                      radius: 30,
-                      backgroundImage: NetworkImage(img),
-                    ),
-                  ),
+
+                      //  margin:
+                      //  const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                      // child: CircleAvatar(
+                      //   radius: 30,
+                      //   backgroundImage: NetworkImage(img),
+                      // ),
+                      ),
                   accountName: const Text(
-                    " أذكار المسلم الذكي",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    "",
+                    // style: TextStyle(
+                    //   fontSize: 20,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
                   ),
-                  accountEmail: const Text("ربي إغفر لي ولوالدي",
-                      style: TextStyle(fontSize: 20))),
+                  accountEmail: context.locale.toString() == 'ar'
+                      ? Text("ربي إغفر لي ولوالدي".tr(),
+                          style: TextStyle(fontSize: 20))
+                      : Expanded(
+                          child: Text("ربي إغفر لي ولوالدي".tr(),
+                              style: TextStyle(fontSize: 17)),
+                        )),
             ]),
           ),
           ListTile(
-            title: const Text("القائمة الرئيسية",
+            title: Text("القائمة الرئيسية".tr(),
                 style: const TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
@@ -45,7 +52,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("القرأن الكريم", style: TextStyle(fontSize: 17)),
+            title: Text("القرأن الكريم".tr(), style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.book,
@@ -57,7 +64,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("أذكاري الخاصة ",
+            title: Text("أذكاري الخاصة".tr(),
                 style: const TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
@@ -70,7 +77,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("أذكار المسلم", style: TextStyle(fontSize: 17)),
+            title: Text("أذكار المسلم".tr(), style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.person,
@@ -84,8 +91,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title:
-                const Text("الإعدادات", style: const TextStyle(fontSize: 17)),
+            title: Text("الإعدادات".tr(), style: const TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.settings,
@@ -97,7 +103,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("المسبحة الإلكترونية",
+            title: Text("المسبحة الإلكترونية".tr(),
                 style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
@@ -110,8 +116,8 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("أسماء الله الحسنى ",
-                style: TextStyle(fontSize: 17)),
+            title:
+                Text("أسماء الله الحسنى".tr(), style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.favorite,
@@ -124,8 +130,8 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("مناسبات دينية ",
-                style: const TextStyle(fontSize: 17)),
+            title:
+                Text("مناسبة دينية".tr(), style: const TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.event_available,
@@ -137,8 +143,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title:
-                const Text("الترايخ الهجري  ", style: TextStyle(fontSize: 17)),
+            title: Text("التاريخ الهجري".tr(), style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.wysiwyg,
@@ -150,8 +155,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title:
-                const Text("رسائل إيمانية   ", style: TextStyle(fontSize: 17)),
+            title: Text("رسائل ايمانية".tr(), style: TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(
               Icons.speaker_notes,
@@ -163,7 +167,7 @@ class MyDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text("طلباتكم نلبيها ",
+            title: Text("طلباتكم نلبيها".tr(),
                 style: const TextStyle(fontSize: 17)),
             trailing: const Icon(Icons.arrow_forward_ios),
             leading: const Icon(

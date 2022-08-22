@@ -1,29 +1,40 @@
 {
-    "Remembrance of the Muslim":"Remembrance of the Muslim"
-  ,  "The Holy Quran":"The Holy Quran"
-  ,"my memories":"my memories"
-  ,"Settings / adjustment of times and alarm":"Settings / adjustment of times and alarm"
-  ,"God Names":"God Names"
-  ,"rosary":"rosary"
-  ,"Show rosary on screen":"Show rosary on screen"
-  ,"religious occasion":"religious occasion"
-  ,"Islamic History":"Islamic History"
-  ,"Biography of the Prophet":"Biography of the Prophet"
-  ,"Faith messages":"Faith messages"
-  ,"We fulfill your requests":"We fulfill your requests "
-  ,"mainmenu":"main menu"
-  ,"my special memories":"my special memories"
-  ,"Settings":"Settings"
-  ,"electronic rosary":"electronic rosary"
-  ,"Remembrance of waking up":"Remembrance of waking up"
-  ,"Evening prayers":"Evening prayers"
-  ,"Remembrance of sleep":"Remembrance of sleep"
-  ,"Remembrances of the mosque":"Remembrances of the mosque"
-  ,"Remembrance of prayer":"Remembrance of prayer"
+  "أذكار المسلم" :"Remembrance of the Muslim"
+   , "القرأن الكريم":"The Holy Quran"
+   ,"أذكاري":"my memories"
+   ,"إعدادات/تعديل أوقات وتنبيه ":"Settings / adjustment of times and alarm"
+   ,"أسماء الله الحسنى":"God Names"
+   ,"المسبحة":"rosary"
+   ,"أظهار المسبحة  على الشاشة":"Show rosary on screen"
+   ,"مناسبة دينية":"religious occasion"
+   ,"التاريخ الهجري":"Islamic History"
+   ,"السيرة النبوية":"Biography of the Prophet"
+   ,"رسائل ايمانية":"Faith messages"
+   ,"طلباتكم نلبيها":"We fulfill your requests"
+   ,"القائمة الرئيسية":"mainmenu"
+   ,"أذكاري الخاصة":"my special memories"
+   ,"الإعدادات":"Settings"
+   ,"المسبحة الإلكترونية":"electronic rosary"
+   ,"أذكار الاستيقاظ":"Remembrance of waking up"
+   ,"أذكار المساء":"     Evening prayers"
+   ,"أذكار النوم":"Remembrance of sleep"
+   ,"أذكار المسجد" :"Remembrances of the mosque"
+   ,"أذكار الصلاة":"Remembrance of prayer"
+   ,"أذكار الصباح":"Citation for morning"
+   ,"إضافة ذكر جديد":"Add a new male"
+   ,": إن اردت ,ستظهر مع الأذكار التلقائية ":"If you want, it will appear with the automatic dhikr."
+   ,"أكتب هنا ما تريد":"Write here what you want"
+   ,"حذف":"delete"
+   ,"إغلاق":"Cancel"
+  , "حفظ":"save"
+  ,"إضف":"Add"
+  , "يمكنك اضافة اذكارك الخاصة هنا ":"You can add your own memories here"
+  ,"ربي إغفر لي ولوالدي":"Lord, forgive me and my parents"
   
-
-
-  
-  
-  
-}
+     
+ 
+ 
+   
+   
+   
+ }
